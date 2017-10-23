@@ -1,0 +1,26 @@
+django-admin startproject <nombre>
+editar settings.py -> conectar base de datos
+python3 manage.py runserver
+python3 manage.py startapp <nombre>
+incluir app en settings.py
+python3 manage.py createsuperuser
+127.0.0.1/8000/admin
+<nombreapp>/models.py{
+
+
+class Post(models.Model):
+	title=models.CharField(max_length=250)
+	body=models.TextField()
+	created_at=models.DateTimeField(auto_now_add=True)
+	updated_at=models.DateTimeField(auto_now=True)
+
+	def __unicode__(self):
+		return self.title
+
+
+}
+
+python3 manage.py makemigrations
+python3 manage.py migrate
+
+

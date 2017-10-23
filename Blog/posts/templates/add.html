@@ -1,0 +1,12 @@
+{%extends "base.html"%}
+
+{%block content%}
+<form action="" method="POST">
+	{%csrf_token%}
+	{{form.as_p}}
+	<label for="Title">Titulo: <input type="text" name="Title"></label>
+	<label for="Body">Titulo: <input type="text" name="Body"></label>
+	<input type="submit" value="Postear">
+</form>
+<h1>Añadido</h1>
+{%endblock%}
